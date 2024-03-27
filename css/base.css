@@ -1,0 +1,151 @@
+@import url("variabels.css");
+
+
+body {
+    font-family: var(--Font);
+    font-size: var(--FontSize);
+    margin: 0;
+    padding: 0;
+    background: var(--colorWhite);
+}
+
+.color-grid {
+    background-color: #e1dede ;
+}
+.color-box__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.color-box {
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem;
+    align-content: end;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix {
+    clear: both;
+    float: none;
+}
+
+/* SPACE */
+
+.space__top__large {
+    margin-top: 10rem !important;
+}
+.space__top__medium {
+    margin-top: 5rem !important;
+}
+.space__top__small {
+    margin-top: 2rem !important;
+}
+.space__top__thin {
+    margin-top: 0.5rem !important;
+}
+
+.space__bottom__large {
+    margin-bottom: 10rem !important;
+}
+.space__bottom__medium {
+    margin-bottom: 5rem !important;
+}
+.space__bottom__small {
+    margin-bottom: 2rem !important;
+}
+.space__bottom__thin {
+    margin-bottom: 0.5rem !important;
+}
+
+
+.space__center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.space_inside_allside {
+    padding: 0.5rem;
+}
+
+.line__primary {
+    background-color: var(--colorPrimary);    
+}
+
+.line__secondary {
+    background-color: var(--colorSecondary);   
+}
+
+.line__alternative {
+    background-color: var(--colorGrey);   
+}
+
+.line__large{
+    width: 50%;
+    height: 3rem;
+}
+
+.line__medium {
+    width: 50%;
+    height: 1rem;
+}
+
+.line__small {
+    width: 50%;
+    height: 0.5rem;
+}
+
+.line__thin {
+    width: 50%;
+    height: 0.25rem;
+}
+
+/* COLOR */
+
+.color__black {
+    color:var(--colorBlack) !important;
+}
+
+.color__white {
+    color:var(--colorWhite) !important;
+}
+
+.color__primary {
+    color:var(--colorPrimary) !important;
+}
+
+.color__secondary {
+    color:var(--colorSecondary) !important;
+}
+
+.color__grey {
+    color:var(--colorGrey) !important;
+}
+
+.color__alternative {
+    color:var(--colorAlternative) !important;
+}
+
+/* SECTION */
+
+.section__header {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+}
+
+.section__typography
+.section__elements
+.section__grid {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.section__footer {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}

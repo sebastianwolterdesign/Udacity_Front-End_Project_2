@@ -1,0 +1,82 @@
+@import url("variabels.css");
+
+.container {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.row {
+    max-width: var(--grid-width__large);
+    margin-inline: auto;
+}
+
+.row:not(:last-child) {
+    margin-bottom: var(--gutter-vertical__small);    
+}
+
+.col__1 {
+    display: grid;
+    grid-template-columns: minmax(300px, 1fr);
+}
+
+.col__1-of-1 {
+    flex: 1;
+}
+
+.col__2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: var(--gutter-horizontal);
+}
+
+.col__1-of-2, 
+.col__2-of-2 {
+    flex: 1; 
+}
+
+.col__3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: var(--gutter-horizontal);
+}
+
+.col__1-of-3, 
+.col__2-of-3, 
+.col__3-of-3  {
+    flex: 1;
+}
+
+
+.col__4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: var(--gutter-horizontal);
+}
+
+.col__1-of-4, 
+.col__2-of-4, 
+.col__3-of-4, 
+.col__4-of-4 {
+    flex: 1; 
+}
+
+.col__12 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(60px, 100%), 1fr));
+    gap: var(--gutter-horizontal);
+}
+
+.col__1-of-12,
+.col__2-of-12,
+.col__3-of-12,
+.col__4-of-12, 
+.col__5-of-12, 
+.col__6-of-12, 
+.col__7-of-12, 
+.col__8-of-12, 
+.col__9-of-12, 
+.col__10-of-12, 
+.col__11-of-12, 
+.col__12-of-12 {
+    flex: 1;
+}

@@ -1,0 +1,274 @@
+@import url("variabels.css");
+
+
+/* HEADLINE STYLING */
+
+.typography__headline {
+    font-family: var(--Headline);
+    color: var(--colorPrimary);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.typography__headline__one {
+    text-transform: uppercase;
+    font-size: clamp(4rem, 4vw, 8rem);
+    line-height: clamp(4rem, 4vw, 8rem);
+    font-weight: var(--FontWeight200);
+    font-kerning: auto;
+    letter-spacing: 2px;
+    color: var(--colorPrimary);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+        
+.typography__headline__two {
+    font-family: var(--Headline);
+    text-transform: uppercase;
+    font-size: clamp(3.5rem, 3.5vw, 7.5rem);
+    line-height: clamp(3.5rem, 3.5vw, 7.5rem);
+    font-weight: var(--FontWeight200);
+    color: var(--colorPrimary);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+        
+.typography__headline__three {
+    font-family: var(--Headline);
+    text-transform: uppercase;
+    font-size: clamp(3rem, 3vw, 7rem);
+    line-height: clamp(3rem, 3vw, 7rem);
+    font-weight: var(--FontWeight200);
+    color: var(--colorPrimary);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+        
+.typography__headline__four {
+    font-family: var(--Headline);
+    text-transform: uppercase;
+    font-size: clamp(2.5rem, 2.5vw, 6.5rem);
+    line-height: clamp(2.5rem, 2.5vw, 6.5rem);
+    font-weight: var(--FontWeight600);
+    color: var(--colorSecondary);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+        
+.typography__headline__five {
+    font-family: var(--Headline);
+    text-transform: uppercase;
+    font-size: clamp(2rem, 2vw, 6rem);
+    line-height: clamp(2rem, 2vw, 6rem);
+    font-weight: var(--FontWeight600);
+    color: var(--colorSecondary);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+        
+.typography__headline__six {
+    font-family: var(--Headline);
+    text-transform: uppercase;
+    font-size: clamp(1.25rem, 1.25vw, 5rem);
+    line-height: clamp(1.25rem, 1.25vw, 5rem);
+    font-weight: var(--FontWeight600);
+    color: var(--colorSecondary);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* SUBLINE STYLING */
+
+.typography__subline__one {
+    font-family: var(--Headline);
+    text-transform: uppercase;
+    font-size: clamp(1.25rem, 1.25vw, 5rem);
+    line-height: clamp(1.25rem, 1.25vw, 5rem);
+    font-weight: var(--FontWeight600);
+    color: var(--colorSecondary);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.typography__subline__two {
+    font-family: var(--Headline);
+    text-transform: uppercase;
+    font-size: clamp(2rem, 2vw, 6rem);
+    line-height: clamp(2rem, 2vw, 6rem);
+    font-weight: var(--FontWeight600);
+    color: var(--colorSecondary);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.typography__subline__three {
+    font-family: var(--Headline);
+    text-transform: uppercase;
+    font-size: clamp(2.5rem, 2.5vw, 6.5rem);
+    line-height: clamp(2.5rem, 2.5vw, 6.5rem);
+    font-weight: var(--FontWeight600);
+    color: var(--colorSecondary);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+        
+
+
+/* PARAGRAPH STYLING */
+
+.typography__paragraph {
+    font-family: var(--Font);
+    font-size: clamp(1rem, 0.75vw, 1.5rem);
+    line-height: clamp(1.25rem, 0.9vw, 2rem);
+    color: var(--colorBlack);
+    font-weight: var(--FontWeight300);
+    letter-spacing:0.02rem;
+}
+
+.typography__paragraph:not(:last-child)
+.typography__paragraph__small:not(:last-child)
+.typography__paragraph__large:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.typography__paragraph__small {
+    font-family: var(--Font);
+    font-size: clamp(0.75rem, 0.6vw, 1rem);
+    line-height: clamp(1rem, 0.8vw, 1.5rem);
+    color: var(--colorBlack);
+    font-weight: var(--FontWeight300);
+    letter-spacing:0.02rem;
+}
+
+.typography__paragraph__large {
+    font-family: var(--Font);
+    font-size: clamp(1.5rem, 0.8vw, 2rem);
+    line-height: clamp(2rem, 1vw, 2.5rem);
+    color: var(--colorBlack);
+    font-weight: var(--FontWeight300);
+    letter-spacing:0.02rem;
+}
+
+.typography__paragraph__link {
+    font-weight: var(--FontWeight600);
+    color: var(--colorBlack);
+    text-decoration: none;
+}
+
+.typography__paragraph__link:hover {
+    color: var(--colorSecondary);
+}
+
+.typography__paragraph__link:active {
+    color: var(--colorSecondary);
+}
+
+.typography__paragraph__weight100 {
+    font-weight: var(--FontWeight100);
+}
+.typography__paragraph__weight200 {
+    font-weight: var(--FontWeight200);
+}
+.typography__paragraph__weight300 {
+    font-weight: var(--FontWeight300);
+}
+.typography__paragraph__weight400 {
+    font-weight: var(--FontWeight400);
+}
+.typography__paragraph__weight500 {
+    font-weight: var(--FontWeight500);
+}
+.typography__paragraph__weight600 {
+    font-weight: var(--FontWeight600);
+}
+.typography__paragraph__weight700 {
+    font-weight: var(--FontWeight700);
+}
+.typography__paragraph__weight800 {
+    font-weight: var(--FontWeight800);
+}
+.typography__paragraph__weight900 {
+    font-weight: var(--FontWeight900);
+}
+
+.typography__paragraph_quote {
+    font-family: var(--Font);
+    font-size: clamp(1.5rem, 1vw, 2rem);
+    line-height: clamp(2rem, 1.25vw, 2.5rem);
+    color: var(--colorBlack);
+    font-weight: var(--FontWeight600);
+    letter-spacing:0.02rem;
+
+}
+
+.typography__paragraph_quote:before {
+    content: "”";
+    font-size: calc(6 * var(--FontSize));
+    line-height: calc(1 * var(--FontLine));
+    font-weight: var(--FontWeight900);
+    margin: 0 -1.25rem 0 -0.7rem;
+    position: relative;
+    top: 3.75rem;
+    z-index: -2;
+    color: var(--colorSecondary);
+}
+
+.typography__paragraph_quote:after {
+    content: "“";
+    font-size: calc(6 * var(--FontSize));
+    line-height: calc(1 * var(--FontLine));
+    font-weight: var(--FontWeight900);
+    margin: 0 0.25rem 0 -1.25rem;
+    position: relative;
+    top: 2.5rem;
+    z-index: -2;
+    color: var(--colorSecondary);
+}
+        
+/* LISTING STYLING - BULLET POINT */
+          
+.typography__paragraph__list {
+    margin: 0;
+    padding: 0;
+}
+
+.typography__paragraph__list__point {
+    margin-left: 1rem;
+}  
+
+.typography__paragraph__list__point__item {
+    list-style: none;
+    list-style-position: inside;
+    line-height: calc(1.5 * var(--FontLine));
+}
+
+.typography__paragraph__list__point__item:before {
+    content: "•";
+    font-size: calc(1.4 * var(--FontSize));
+    line-height: calc(1 * var(--FontLine));
+    margin: 0 0.25rem 0 -0.7rem;
+    position: relative;
+    top: 0.04rem;
+    color: var(--colorSecondary);
+}    
+
+
+/* LISTING STYLING - NUMBER */
+
+.typography__paragraph__list__number {
+    margin-left: 2.5rem;
+    list-style: none;
+    counter-reset: section;
+
+}
+
+.typography__paragraph__list__number__item {
+    counter-increment: section;
+    line-height: calc(1.5 * var(--FontLine));
+}
+
+.typography__paragraph__list__number__item:before {
+    content: counters(section, ".") ". ";
+    font-weight: var(--FontWeight600);
+    margin: 0 0.5rem 0 -1.5rem;
+}

@@ -1,0 +1,222 @@
+@import url("variabels.css");
+
+.image {
+    width: 100%;
+    border-radius: var(--radiusThin);
+}
+
+/* HOVER IMAGE */
+
+.image__hover {
+    object-fit: cover;
+    width: 100%;
+    
+}
+
+.image__hover:hover {
+    filter: none;
+    transition: filter 0.5s ease-in-out;
+    filter: grayscale(100%) opacity(30%) brightness(130%);
+}
+
+/* TEXT HOVER OVER THE IMAGE */
+
+.image__container__image_text {
+    position: relative;
+    cursor: pointer;
+}
+
+.image__container__image_text:hover .image__container__image_text__hover {
+    width: 94%;
+}
+
+.image__container__image_text img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+.image__container__image_text__hover {
+    height: 90%;
+    width: 94%;
+    background: rgba(0, 74, 153, 0.7);
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    filter: opacity(0%);
+    border-radius: var(--radiusXThin);
+}
+
+.image__container__image_text__hover:hover {
+    filter: none;
+    transition: filter 0.5s ease-in-out;
+}
+
+.image__container__image_text__hover h5 {
+    color: var(--colorWhite);
+    text-align: center;
+    padding: 2rem 3rem;
+}
+
+/* TEXT SILD-IN OVER THE IMAGE */
+.image__container__image_silder {
+    position: relative;
+    cursor: pointer;
+}
+
+.image__container__image_silder:hover .image__container__image_silder__hover {
+    height: 50%;
+    width: 94%;
+}
+
+.image__container__image_text img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+}
+
+.image__container__image_silder__hover {
+    height: 0;
+    width: 94%;
+    background: rgba(255, 250, 250, 0.95);
+    position: absolute;
+    bottom: 2.5%;
+    left: 3%;
+    display: flex;
+    justify-content: top;
+    align-items: top;
+    overflow: hidden;
+    border-radius: var(--radiusXThin);
+    transition: 0.7s ease;
+}
+
+.image__container__image_silder__hover_text {
+    padding: 1rem 1rem;
+}
+
+/* IMAGE GRID */
+
+    
+.grid__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1rem;
+    margin-inline: auto;
+}
+
+.grid__container__card {
+    background: var(--colorWhite);
+    align-self: end;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.grid__container__content__stacked {
+    display: grid;
+}
+
+.grid__container__content__stacked > * {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+/* .grid__container__1
+.grid__container__2
+.grid__container__subgrid__2-1
+.grid__container__subgrid__2-2
+.grid__container__3
+.grid__container__4
+*/
+
+.grid__container__img {
+    height: 20rem;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+/* GRID COLUMNS */
+
+@media (min-width: 60rem) {
+
+    .grid__container__1 .grid__container__img {
+        height: 41rem;
+    }
+
+    .grid__container__1 {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+}
+
+@media (min-width: 80rem) {
+
+    .grid__container__1 .grid__container__img,
+    .grid__container__3 .grid__container__img {
+        height: 41rem;
+    }
+
+    .grid__container__subgrid__2-1 .grid__container__img,
+    .grid__container__subgrid__2-2 .grid__container__img {
+        height: 20rem;
+    }
+
+    .grid__container__1 {
+        grid-column: span 2;
+        grid-row: span 3;
+    }
+
+    .grid__container__3 {
+        grid-column-start: 6;
+        grid-row: 1 / span 3;
+    }
+
+    .grid__container__4 {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+}
+
+@media (min-width: 100rem) {
+
+    .grid__container__1 .grid__container__img,
+    .grid__container__3 .grid__container__img {
+        height: 41.25rem;
+    }
+
+    .grid__container__subgrid__2-1 .grid__container__img,
+    .grid__container__subgrid__2-2 .grid__container__img {
+        height: 9.6rem;
+    }
+
+    .grid__container__1 {
+        grid-column: span 3;
+        grid-row: span 4;
+    }
+
+    .grid__container__subgrid__2-1 {
+        grid-column: span 2;
+    }
+    .grid__container__subgrid__2-2 {
+        grid-column: span 2;
+    }
+
+    .grid__container__3 {
+        grid-column-start: 6;
+        grid-row: 1 / span 4;
+    }
+
+    .grid__container__4 {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+}
+
+

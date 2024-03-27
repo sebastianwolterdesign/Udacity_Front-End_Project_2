@@ -1,0 +1,77 @@
+@import url("variabels.css");
+
+.button {
+    font-family: var(--Headline);
+    text-transform: uppercase;
+    font-weight: var(--FontWeight600);
+    border-radius: var(--radiusMedium);
+    margin: 1rem;
+}
+
+.button__round {
+    border-radius: var(--radiusXLarge);
+}
+
+.button__sqaure{
+    border-radius: var(--radiusThin);
+}
+
+.button__large {
+    font-size: clamp(1.5rem, 0.8vw, 2rem);
+    line-height: clamp(2rem, 1vw, 2.5rem);
+    padding: 1.25rem 1.75rem;
+}
+
+.button__medium {
+    font-size: clamp(1rem, 0.75vw, 1.5rem);
+    line-height: clamp(1.25rem, 0.9vw, 2rem);
+    padding: 1rem 1.5rem;
+}
+
+.button__small {
+    font-size: clamp(0.75rem, 0.6vw, 1rem);
+    line-height: clamp(1rem, 0.8vw, 1.5rem);
+    padding: 0.75rem 1.25rem;
+}
+
+.button__primary {
+    color: var(--colorWhite);
+    background-color: var(--colorPrimary);
+    border: 4px solid var(--colorPrimary);
+}
+
+.button__primary__hover,
+.button__primary:hover,
+.button__primary:active {
+    color: var(--colorPrimary);
+    background-color: var(--colorWhite);
+    border: 4px solid var(--colorPrimary);
+}
+
+.button__secondary {
+    color: var(--colorWhite);
+    background-color: var(--colorSecondary);
+    border: 4px solid var(--colorSecondary);
+}
+
+.button__secondary__hover,
+.button__secondary:hover,
+.button__secondary:active {
+    color: var(--colorSecondary);
+    background-color: var(--colorWhite);
+    border: 4px solid var(--colorSecondary);
+}
+
+.button__alternative {
+    color: var(--colorGrey);
+    background-color: var(--colorWhite);
+    border: 4px solid var(--colorGrey);
+}
+
+.button__alternative__hover,
+.button__alternative:hover,
+.button__alternative:active {
+    color: var(--colorWhite);
+    background-color: var(--colorGrey);
+    border: 4px solid var(--colorGrey);
+}

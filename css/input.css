@@ -1,0 +1,231 @@
+@import url("variabels.css");
+
+/* NOTIFICATION */
+.notification {
+    font-family: var(--Font);
+    font-size: clamp(1rem, 0.75vw, 1.5rem);
+    line-height: clamp(1.25rem, 0.9vw, 2rem);
+    font-weight: var(--FontWeight500);
+    margin: 1rem 0 !important;
+    padding: 1.5rem 2rem !important;
+    border-radius: var(--radiusMedium) !important;
+    border: 2px solid;
+}
+
+.message__info {
+    color: var(--colorSecondary);
+    background-color: var(--colorSecondary5);
+    border-color: var(--colorSecondary);
+}
+
+.message__success {
+    color: var(--colorSuccess);
+    background-color: var(--colorSuccess5);
+    border-color: var(--colorSuccess);
+}
+
+.message__danger {
+    color: var(--colorDanger);
+    background-color: var(--colorDanger5);
+    border-color: var(--colorDanger);
+}
+
+.message__info::before {
+    font-family: "Material Symbols Outlined";
+    content: "\e88e";
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 20;
+    font-size: calc(1.5 * var(--FontSize));
+    line-height: var(--FontLine);
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.message__success::before {
+    font-family: "Material Symbols Outlined";
+    content: "\e86c";
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 20;
+    font-size: calc(1.5 * var(--FontSize));
+    line-height: var(--FontLine);
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+.message__danger::before {
+    font-family: "Material Symbols Outlined";
+    content: "\e000";
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 20;
+    font-size: calc(1.5 * var(--FontSize));
+    line-height: var(--FontLine);
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+/* INPUT FIELDS */
+.input__field {
+    font-family: var(--Font);
+    font-size: clamp(0.75rem, 0.6vw, 1rem);
+    line-height: clamp(1rem, 0.8vw, 1.5rem);
+    font-weight: var(--FontWeight400);
+    color: var(--colorGrey);
+    background-color: var(--colorGrey5);
+}
+
+
+/* Select Box */
+.input__container__select_box {
+
+}
+
+.input__select_box {
+
+}
+
+.input__checkbox {
+    
+}
+
+.input__radio {
+
+}
+
+
+
+
+
+
+/* Text Field */
+.input__field__text {
+    margin: 0.5rem 0 !important;
+    padding: 0.75rem 1rem !important;
+    border-radius: var(--radiusSmall);
+    border: 1px solid var(--colorGrey50);
+    width: 100%;
+}   
+
+.input__text {
+    
+}
+
+.input__tel {
+    
+}
+
+.input__email {
+    
+}
+
+.input__url {
+    
+}
+
+.input__password {
+    
+}
+
+.input__search {
+    
+}
+
+.input__textarea {
+
+}
+
+
+/* Dropdown Field */
+.input__option {
+
+}
+
+.input__option__item {
+    
+}
+
+.input__multiple-option {
+    
+}
+
+.input__multiple-option__item {
+    
+}
+
+/* Select Field */
+.input__color {
+    
+}
+
+.input__number {
+    
+}
+
+.input__range {
+    
+}
+
+.input__date {
+    
+}
+
+.input__month {
+    
+}
+
+.input__week {
+    
+}
+
+.input__time {
+    
+}
+
+.input__localtime {
+    
+}
+
+
+/* button */
+.input__button {
+    font-family: var(--Headline);
+    text-transform: uppercase;
+    font-weight: var(--FontWeight600);
+    font-size: calc(1 * var(--FontSize));
+    line-height: calc(1 * var(--FontLine));
+    border-radius: var(--radiusMedium);
+    padding: 1rem 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.input__reset {
+    color: var(--colorGrey);
+    background-color: var(--colorWhite);
+    border: 4px solid var(--colorGrey);
+}
+
+.input__reset:hover {
+    color: var(--colorWhite);
+    background-color: var(--colorGrey);
+    border: 4px solid var(--colorGrey);
+}
+
+.input__sumbit {
+    color: var(--colorWhite);
+    background-color: var(--colorPrimary);
+    border: 4px solid var(--colorPrimary);
+}
+
+.input__sumbit:hover {
+    color: var(--colorPrimary);
+    background-color: var(--colorWhite);
+    border: 4px solid var(--colorPrimary);
+}
