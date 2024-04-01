@@ -10,6 +10,7 @@
   <title>Style-KIT for the Next Project</title>
 
   <link href="css/styles.css" rel="stylesheet">
+
   
 </head>
 
@@ -18,47 +19,58 @@
   <main>
 
 <!-- HEADER - ELEMENTS -->
-    <header class="section__header">
+    <header>
 
 <!-- NAVIGATION - ELEMENTS -->
-        <nav class="container section__navbar">
+        <nav id="navbar" class="section__navbar">
 
             <div class="navbar__brand">
                 <p class="typography__headline__four color__primary">Sebastian Wolter</p>
                 <p class="typography__headline__six color_grey">Style-KIT</p>
             </div>
 
-            <div id="nav-container">
+            <div id="nav-container" class="navbar">
 
             </div>
 
         </nav>
-
-        <div class="container section__header">
-
             
-            
-            <div class="row col__2 space__top__medium">
-                    
+    </header>
+
+<!-- ELEMENTS - WELCOME -->
+    <section id="welcome" data-nav="Welcome">
+
+        <div class="container section__welcome">
+    
+            <h1 class="typography__headline__one">Welcome to our Style Kit Page!</h1>
+            <div class="line__secondary line__large__thin space__top__thin space__bottom__medium"></div>
+
+            <div class="row col__2">
+
                 <div class="col__1-of-2">
-                    <h1 class="typography__headline__one">Welcome to our Style Kit Page!</h1>
-                    <div class="line__secondary line__medium space__top__thin space__bottom__medium"></div>
 
                     <p class="typography__paragraph space__bottom__small">We're thrilled to introduce you to our curated collection of style kits designed to elevate your projects to new heights. Whether you're a seasoned designer, a budding creator, or someone simply looking to add a touch of flair to your work, you've come to the right place.</p>
                     <p class="typography__paragraph space__bottom__small">Our style kits are meticulously crafted to inspire and empower you with a diverse array of design elements, from sleek and modern to whimsically charming. With a focus on versatility and creativity, each kit is thoughtfully assembled to provide you with the building blocks necessary to bring your visions to life.</p>
                     <p class="typography__paragraph space__bottom__small">Explore our selection and discover a world of possibilities. Whether you're designing a website, crafting a presentation, or enhancing your social media presence, our style kits offer the perfect blend of functionality and aesthetics to help you stand out in today's competitive landscape.</p>
                     <p class="typography__paragraph space__bottom__small">So, dive in, unleash your creativity, and let our style kits be the catalyst for your next masterpiece. Welcome to a world of endless inspiration!</p>
+
                 </div>
-                <div class="col__1-of-2">
+
+                <div class="col__1-of-2"> 
+
                     <div><img class="image" class="grid__container__img" src="http://wp11695892.server-he.de/udacity-bilder/pexels-andrea-piacquadio-840996.jpg" alt="Placeholder Image"></div>
+                    
                 </div>
 
+            </div>
+    
         </div>
-
-    </header>
+    
+    </section>
 
 <!-- ELEMENTS - TYPOGRAPHY -->
-    <section id="typography" data-nav="section__typography">
+
+    <section id="typography" data-nav="Typography">
 
         <div class="container section__typography">
     
@@ -174,7 +186,8 @@
     <div class="line__alternative line__thin space__center space__top__large space__bottom__large "></div>
 
 <!-- ELEMENTS - DESIGN -->
-    <section id="design" data-nav="section__design">
+
+    <section id="design" data-nav="Design">
 
       <div class="container section__design">
 
@@ -456,7 +469,8 @@
     <div class="line__alternative line__thin space__center space__top__large space__bottom__large"></div>
 
 <!-- ELEMENTS - IMAGE -->
-    <section id="image" data-nav="section__image">
+
+    <section id="image" data-nav="Image">
 
         <div class="container section__image">
 
@@ -570,7 +584,8 @@
     <div class="line__alternative line__thin space__center space__top__large space__bottom__large"></div>
 
 <!-- ELEMENTS - GRID -->
-    <section id="grid" data-nav="section__grid">
+
+    <section id="grid" data-nav="Grid">
 
         <div class="container section__grid">
   
@@ -627,10 +642,12 @@
         </div>
 
     </section>
-
+    
     <div class="line__alternative line__thin space__center space__top__large space__bottom__large"></div>
 
   </main>
+
+<!-- FOOTER - ELEMENTS-->
 
   <footer class="container section__footer">
 
@@ -638,7 +655,43 @@
 
   </footer>
 
-  <script src="js/app.js"></script>
+
+
+    <script>
+
+        // Navigation
+        let navItems = [];
+        let sections = document.querySelectorAll("section");
+        sections.forEach(section => {
+            let dataNav = section.getAttribute("data-nav");
+            if (dataNav) {
+                navItems.push(dataNav);
+            }
+        });
+
+        let ulClass = "navbar navbar__list";
+        let liClass = "navbar navbar__list__item";
+
+        let ul = document.createElement("ul");
+        ul.className = ulClass;
+
+        for (let i = 0; i < navItems.length; i++) {
+            let li = document.createElement("li");
+            li.className = liClass;
+
+            let a = document.createElement("a");
+            a.href = "#" + navItems[i].toLowerCase();
+            a.innerHTML = navItems[i];
+
+            li.appendChild(a);
+            ul.appendChild(li);
+        }
+
+        document.getElementById("nav-container").appendChild(ul);
+
+    </script>
+
+    <script src="js/app.js"></script>
 
 </body>
 
