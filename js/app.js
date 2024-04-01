@@ -1,26 +1,3 @@
-// Adding the navbar dynamically
-
-var navItems = ["Typography", "Design", "Image", "Grid"];
-var ulClass = "navbar navbar__list";
-var liClass = "navbar navbar__list__item";
-
-var ul = document.createElement("ul");
-ul.className = ulClass;
-
-for (var i = 0; i < navItems.length; i++) {
-  var li = document.createElement("li");
-  li.className = liClass;
-
-  var a = document.createElement("a");
-  a.href = "#" + navItems[i].toLowerCase();
-  a.innerHTML = navItems[i];
-
-  li.appendChild(a);
-  ul.appendChild(li);
-}
-
-document.getElementById("nav-container").appendChild(ul);
-
 // Scroll smooth
 
 window.addEventListener("scroll", highlightSection);
@@ -35,11 +12,11 @@ function highlightSection() {
     if (rect.top <= 0 && rect.bottom >= 0) {
       document
         .querySelector(`.navbar__list__item a[href="#${item.toLowerCase()}"]`)
-        .classList.add("active");
+        .classList.add("navbar__list__item__active");
     } else {
       document
         .querySelector(`.navbar__list__item a[href="#${item.toLowerCase()}"]`)
-        .classList.remove("active");
+        .classList.remove("navbar__list__item__active");
     }
   });
 }
@@ -50,4 +27,19 @@ function smoothScroll(event) {
   document.querySelector(targetId).scrollIntoView({
     behavior: "smooth",
   });
+}
+
+// Navigation Sticky
+window.onscroll = function () {
+  myFunction();
+};
+let navbar = document.getElementById("navbar");
+let sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
 }
