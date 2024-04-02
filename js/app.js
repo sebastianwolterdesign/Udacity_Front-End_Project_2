@@ -1,12 +1,16 @@
 // Scroll smooth
 
+let navListe = Array.from(
+  document.querySelectorAll(".navbar__list__item a")
+).map((a) => a.getAttribute("href").slice(1));
+
 window.addEventListener("scroll", highlightSection);
 document.querySelectorAll(".navbar__list__item a").forEach((a) => {
   a.addEventListener("click", smoothScroll);
 });
 
 function highlightSection() {
-  navItems.forEach((item) => {
+  navListe.forEach((item) => {
     const element = document.getElementById(item.toLowerCase());
     const rect = element.getBoundingClientRect();
     if (rect.top <= 0 && rect.bottom >= 0) {
