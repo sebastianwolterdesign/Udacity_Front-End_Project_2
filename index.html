@@ -30,7 +30,8 @@
             </div>
 
             <div id="nav-container" class="navbar">
-
+                <ul class="navbar navbar__list">
+                </ul>
             </div>
 
         </nav>
@@ -660,34 +661,21 @@
     <script>
 
         // Navigation
-        let navItems = [];
-        let sections = document.querySelectorAll("section");
-        sections.forEach(section => {
-            let dataNav = section.getAttribute("data-nav");
-            if (dataNav) {
-                navItems.push(dataNav);
-            }
-        });
-
-        let ulClass = "navbar navbar__list";
+        let navList = document.querySelector('ul');
+        let sections = document.querySelectorAll('section');
         let liClass = "navbar navbar__list__item";
 
-        let ul = document.createElement("ul");
-        ul.className = ulClass;
+        sections.forEach(section => {
+            let listItem = document.createElement('li');
+            let anchor = document.createElement('a');
+            listItem.classList.add("navbar", "navbar__list__item");
 
-        for (let i = 0; i < navItems.length; i++) {
-            let li = document.createElement("li");
-            li.className = liClass;
+            anchor.href = `#${section.id}`;
+            anchor.textContent = section.dataset.nav;
 
-            let a = document.createElement("a");
-            a.href = "#" + navItems[i].toLowerCase();
-            a.innerHTML = navItems[i];
-
-            li.appendChild(a);
-            ul.appendChild(li);
-        }
-
-        document.getElementById("nav-container").appendChild(ul);
+            listItem.appendChild(anchor);
+            navList.appendChild(listItem);
+        });
 
     </script>
 
